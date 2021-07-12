@@ -1,9 +1,10 @@
+import { Header } from '../../components/header';
 import './styles.scss';
 
 export function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Header />
     </>
   );
 }

@@ -2,6 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root{
+  --white: #FFF;
+
+  --grey-50: #F7F8FA;
+  --grey-100: #E6E8EB;
+  --grey-200: #AFB2B1;
+  --grey-500: #808080;
+  --grey-800: #494D4B;
 }
 
 @media (max-width: 1080px) {
@@ -30,4 +41,8 @@
     font-size: 75%;
     /* 12px */
   }
+}
+
+body {
+  background: var(--grey-50);
 }

@@ -1,0 +1,148 @@
+.Header {
+  background-color: var(--grey-50);
+  color: #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 8.125rem;
+  padding: 0 17.5rem;
+
+  // box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.25);
+  transition: ease all 0.5s;
+}
+
+.LogoImg {
+  transition: ease all 0.5s;
+}
+
+.HeaderLinks {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+
+  a {
+    color: inherit;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+
+    -webkit-user-drag: none;
+    transition: ease all 0.5s;
+
+    &:hover:not(:last-child) {
+      border-bottom: #333 1px solid;
+    }
+
+    &:last-child {
+      color: var(--white);
+      background-color: var(--red);
+
+      padding: 8px 16px;
+      border-radius: 9999px;
+
+      transition: ease all 0.5s;
+    }
+
+    &:last-child:hover {
+      background-color: var(--red-dark);
+    }
+  }
+}
+
+.HeaderDrawer {
+  display: none;
+
+  button {
+    color: var(--red);
+    background: none;
+
+    height: 55px;
+    width: 55px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+
+    transition: ease all 0.5s;
+
+    &:active {
+      color: var(--white);
+      background-color: var(--red);
+    }
+  }
+}
+
+.HeaderDrawerLinks {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  padding: 20px;
+  gap: 10px;
+
+  transition: ease all 0.5s;
+
+  a {
+    color: inherit;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    padding: 6px 8px;
+    border-radius: 5px;
+
+    -webkit-user-drag: none;
+    transition: ease all 0.5s;
+  }
+}
+
+.MuiDrawer-paper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+}
+
+@media (max-width: 1600px) {
+  .Header {
+    padding: 0 12.5rem;
+
+    .LogoImg {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Header {
+    padding: 0 9.5rem;
+  }
+}
+
+@media (max-width: 928px) {
+  .Header {
+    padding: 0 6.25rem;
+  }
+}
+
+@media (max-width: 688px) {
+  .Header {
+    padding: 0 1.5rem;
+
+    .HeaderLinksWrapper {
+      display: none !important;
+    }
+
+    .HeaderDrawer {
+      display: inline;
+    }
+
+    .LogoImg {
+      width: 80%;
+    }
+  }
+}

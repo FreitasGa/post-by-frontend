@@ -7,7 +7,7 @@ import { NotFound } from './pages/notFound';
 export function App() {
   return (
     <>
-      <Toaster />
+      <Toaster position="bottom-right" />
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />

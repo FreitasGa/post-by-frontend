@@ -5,14 +5,25 @@
   font-family: 'Nunito', sans-serif;
 }
 
-:root{
-  --white: #FFF;
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-  --grey-50: #F7F8FA;
-  --grey-100: #E6E8EB;
-  --grey-200: #AFB2B1;
+:root {
+  --white: #fff;
+
+  --grey-50: #f7f8fa;
+  --grey-100: #e6e8eb;
+  --grey-200: #afb2b1;
   --grey-500: #808080;
-  --grey-800: #494D4B;
+  --grey-800: #494d4b;
+
+  --red: #b66767;
+  --red-dark: #9b5858;
 }
 
 @media (max-width: 1080px) {

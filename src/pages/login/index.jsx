@@ -27,15 +27,15 @@ export function Login() {
     setIsLoading(true);
     try {
       await Auth.signIn(email, password);
-      userHasAuthenticated(true);
       setIsLoading(false);
+      userHasAuthenticated(true);
       history.push('/');
       toast('Entrou na conta');
     } catch (error) {
+      setIsLoading(false);
       toast.error(error.message);
       setEmail('');
       setPassword('');
-      setIsLoading(false);
     }
   }
 

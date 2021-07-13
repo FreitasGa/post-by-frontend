@@ -1,12 +1,13 @@
 .LoginWrapper {
-  margin: 15px 0;
-  height: 60vh;
+  margin: 8.75rem 0;
   min-height: fit-content;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  transition: ease all 0.5s;
 }
 
 .LoginBody {
@@ -126,11 +127,19 @@
   .LoginBody {
     padding: 0 12.5rem;
   }
+
+  .LoginWrapper {
+    margin: 8rem 0;
+  }
 }
 
 @media (max-width: 1024px) {
   .LoginBody {
     padding: 0 9.5rem;
+  }
+
+  .LoginWrapper {
+    margin: 7.25rem 0;
   }
 }
 
@@ -138,10 +147,18 @@
   .LoginBody {
     padding: 0 6.25rem;
   }
+
+  .LoginWrapper {
+    margin: 6.5rem 0;
+  }
 }
 
 @media (max-width: 688px) {
   .LoginBody {
     padding: 0 1.5rem;
+  }
+
+  .LoginWrapper {
+    margin: 5.75rem 0;
   }
 }

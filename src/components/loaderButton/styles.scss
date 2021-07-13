@@ -1,0 +1,23 @@
+.LoaderButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoaderSpinning {
+  margin-right: 7px;
+  top: 2px;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1) rotate(-360deg);
+  }
+}

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { useAppContext } from '../../libs/contextLib';
 
 import { Header } from '../../components/header';
+import { LoaderButton } from '../../components/loaderButton';
 
 import './styles.scss';
 
@@ -15,6 +16,7 @@ export function Login() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -22,14 +24,18 @@ export function Login() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+    setIsLoading(true);
     try {
       await Auth.signIn(email, password);
       userHasAuthenticated(true);
-      toast('Entrou na conta');
+      setIsLoading(false);
       history.push('/');
+      toast('Entrou na conta');
     } catch (error) {
-      console.log(error);
+      toast.error(error.message);
+      setEmail('');
+      setPassword('');
+      setIsLoading(false);
     }
   }
 
@@ -58,13 +64,14 @@ export function Login() {
             <Link to="/login" className="LoginForgotPassword">
               Esqueci a senha?
             </Link>
-            <button
+            <LoaderButton
               type="submit"
               className="LoginSubmit"
+              isLoading={isLoading}
               disabled={!validateForm()}
             >
               Entrar
-            </button>
+            </LoaderButton>
           </form>
           <Link to="/register">Crie um conta</Link>
         </div>

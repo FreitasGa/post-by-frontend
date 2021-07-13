@@ -7,6 +7,9 @@ import { useAppContext } from '../../libs/contextLib';
 
 import { SwipeableDrawer } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import logo from '../../assets/logo.svg';
@@ -71,11 +74,31 @@ export function Header() {
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
         >
-          <div className="HeaderDrawerLinks">
-            <Link to="/">Inicio</Link>
-            <Link to="/login">Entrar</Link>
-            <Link to="/register">Cadastro</Link>
-          </div>
+          {isAuthenticated ? (
+            <div className="HeaderDrawerLinks Logged">
+              <Link to="/">
+                <HomeIcon />
+                Inicio
+              </Link>
+              <Link to="/cart">
+                <ShoppingCartIcon />
+                Carrinho
+              </Link>
+              <Link to="/profile">
+                <PersonIcon />
+                Perfil
+              </Link>
+              <button onClick={handleLogout}>
+                <ExitToAppIcon /> Sair
+              </button>
+            </div>
+          ) : (
+            <div className="HeaderDrawerLinks">
+              <Link to="/">Inicio</Link>
+              <Link to="/login">Entrar</Link>
+              <Link to="/register">Cadastro</Link>
+            </div>
+          )}
         </SwipeableDrawer>
       </div>
     </div>

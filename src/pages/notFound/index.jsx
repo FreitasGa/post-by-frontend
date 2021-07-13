@@ -7,9 +7,11 @@ export function NotFound() {
   return (
     <>
       <Header />
-      <div className="NotFoundBody">
-        <h2>Desculpe, não encontramos esta pagina!</h2>
-        <Link to="/">Voltar para o Inicio</Link>
+      <div className="NotFound">
+        <div className="NotFoundBody">
+          <h2>Desculpe, não encontramos esta pagina!</h2>
+          <Link to="/">Voltar para o Inicio</Link>
+        </div>
       </div>
     </>
   );

@@ -1,12 +1,13 @@
 .RegisterWrapper {
-  margin: 15px 0;
-  height: 60vh;
+  margin: 8.75rem 0;
   min-height: fit-content;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  transition: ease all 0.5s;
 }
 
 .RegisterBody {
@@ -26,6 +27,7 @@
   h1 {
     font-weight: 700;
     transition: ease all 0.5s;
+    align-self: center;
   }
 
   a {
@@ -57,6 +59,18 @@
     flex-direction: column;
 
     gap: 10px;
+
+    p {
+      font-weight: 600;
+      font-size: 1.125rem;
+
+      width: 300px;
+      word-wrap: wrap;
+      text-align: center;
+      align-self: center;
+
+      transition: ease all 0.5s;
+    }
 
     input {
       width: 320px;
@@ -126,11 +140,19 @@
   .RegisterBody {
     padding: 0 12.5rem;
   }
+
+  .RegisterWrapper {
+    margin: 8rem 0;
+  }
 }
 
 @media (max-width: 1024px) {
   .RegisterBody {
     padding: 0 9.5rem;
+  }
+
+  .RegisterWrapper {
+    margin: 7.25rem 0;
   }
 }
 
@@ -138,10 +160,18 @@
   .RegisterBody {
     padding: 0 6.25rem;
   }
+
+  .RegisterWrapper {
+    margin: 6.5rem 0;
+  }
 }
 
 @media (max-width: 688px) {
   .RegisterBody {
     padding: 0 1.5rem;
+  }
+
+  .RegisterWrapper {
+    margin: 5.75rem 0;
   }
 }

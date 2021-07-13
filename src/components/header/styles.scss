@@ -33,7 +33,12 @@
     transition: ease all 0.5s;
 
     &:hover:not(:last-child) {
-      border-bottom: #333 1px solid;
+      border-bottom: 1px solid #333;
+    }
+
+    &:active:not(:last-child) {
+      color: var(--red);
+      border-bottom: 1px solid var(--red);
     }
 
     &:last-child {
@@ -48,6 +53,26 @@
 
     &:last-child:hover {
       background-color: var(--red-dark);
+    }
+
+    &:last-child:active {
+      background-color: var(--red-dark);
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: ease all 0.5s;
+
+
+    &:hover {
+      color: var(--red);
+    }
+
+    &:active {
+      color: var(--red);
     }
   }
 }
@@ -81,7 +106,7 @@
   flex-direction: column;
 
   width: 200px;
-  padding: 20px;
+  padding: 20px 0;
   gap: 10px;
 
   transition: ease all 0.5s;
@@ -93,11 +118,15 @@
     font-size: 1.5rem;
     text-decoration: none;
 
-    padding: 6px 8px;
-    border-radius: 5px;
+    padding: 8px 20px;
 
     -webkit-user-drag: none;
     transition: ease all 0.5s;
+
+    &:active {
+      color: var(--white);
+      background-color: var(--red);
+    }
   }
 }
 

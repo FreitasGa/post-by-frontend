@@ -1,4 +1,4 @@
-.LoginWrapper {
+.RegisterWrapper {
   margin: 15px 0;
   height: 60vh;
   min-height: fit-content;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.LoginBody {
+.RegisterBody {
   color: #333;
 
   display: flex;
@@ -46,13 +46,13 @@
   }
 }
 
-.LoginForm {
+.RegisterForm {
   display: flex;
   flex-direction: column;
 
-  gap: 12px;
+  gap: 24px;
 
-  .LoginFormInput {
+  .RegisterFormInput {
     display: flex;
     flex-direction: column;
 
@@ -96,7 +96,7 @@
     }
   }
 
-  .LoginSubmit {
+  .RegisterSubmit {
     color: var(--white);
     background-color: var(--red);
 
@@ -123,25 +123,25 @@
 }
 
 @media (max-width: 1600px) {
-  .LoginBody {
+  .RegisterBody {
     padding: 0 12.5rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .LoginBody {
+  .RegisterBody {
     padding: 0 9.5rem;
   }
 }
 
 @media (max-width: 928px) {
-  .LoginBody {
+  .RegisterBody {
     padding: 0 6.25rem;
   }
 }
 
 @media (max-width: 688px) {
-  .LoginBody {
+  .RegisterBody {
     padding: 0 1.5rem;
   }
 }

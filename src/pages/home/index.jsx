@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { API } from 'aws-amplify';
 
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { useAppContext } from '../../libs/contextLib';
 
 import { Header } from '../../components/header';
 import { Item } from '../../components/homeItem';

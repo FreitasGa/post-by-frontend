@@ -29,16 +29,18 @@ export function CartItem({
     <div className="CartItem">
       <img className="CartItemImage" src={imgUrl} alt="" />
       <b className="CartItemName">{name}</b>
-      <b className="CartItemPrice">R$ {price}</b>
-      <input
-        className="CartItemQuantity"
-        type="number"
-        value={tempQuantity}
-        onChange={handleUpdate}
-        min={1}
-        max={totalQuantity}
-      />
-      <b className="CartItemTotalPrice">R$ {price * tempQuantity}</b>
+      <div>
+        <b className="CartItemPrice">R$ {price}</b>
+        <input
+          className="CartItemQuantity"
+          type="number"
+          value={tempQuantity}
+          onChange={handleUpdate}
+          min={1}
+          max={totalQuantity}
+        />
+        <b className="CartItemTotalPrice">R$ {price * (tempQuantity || 0)}</b>
+      </div>
 
       <button className="CartItemDelete" onClick={handleDelete}>
         <DeleteIcon />

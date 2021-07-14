@@ -8,6 +8,7 @@ import { useAppContext } from '../../libs/contextLib';
 
 import { Header } from '../../components/header';
 import './styles.scss';
+import { ProfileItem } from '../../components/profileItem';
 
 export function Profile() {
   const { isAuthenticated } = useAppContext();
@@ -52,28 +53,36 @@ export function Profile() {
       <Header />
       <div className="ProfileBody">
         <h1>Profile</h1>
-        <div className="ProfileCard">
-          <PersonIcon className="ProfileIcon" fontSize="large" />
-          <div className="CardText">
-            <h2>{name}</h2>
-            <b>{email}</b>
+        <div className="ProfileWrapper">
+          <div className="ProfileCard">
+            <PersonIcon className="ProfileIcon" fontSize="large" />
+            <div className="CardText">
+              <h2>{name}</h2>
+              <b>{email}</b>
+            </div>
           </div>
-        </div>
-        <div className="ReserveHistory">
-          {reserves.length === 0 ? (
-            <div className="ReserveHistorylaceholder">
-              <h2>Para que você ainda não fez reservas.</h2>
-              <Link to="/">Ir as compras</Link>
-            </div>
-          ) : (
-            <div className="ReserveHistoryItems">
-              {reserves.map(({ key, totalPrice }) => (
-                <div>
-                  <b>{totalPrice}</b>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="ReserveHistory">
+            {reserves.length === 0 ? (
+              <div className="ReserveHistorylaceholder">
+                <h2>Para que você ainda não fez reservas.</h2>
+                <Link to="/">Ir as compras</Link>
+              </div>
+            ) : (
+              <div className="ReserveHistoryItems">
+                {reserves.map(
+                  ({ items, reserveId, totalPrice, totalQuantity }, index) => (
+                    <ProfileItem
+                      key={index}
+                      items={items}
+                      reserveId={reserveId}
+                      totalPrice={totalPrice}
+                      totalQuantity={totalQuantity}
+                    />
+                  )
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

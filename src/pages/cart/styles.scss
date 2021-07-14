@@ -150,4 +150,16 @@
   .CartBody {
     padding: 0 1.5rem;
   }
+
+  .CartOptions {
+    width: 100%;
+
+    .CartDelete {
+      justify-self: flex-end;
+    }
+
+    .CartReserve {
+      width: 100% !important;
+    }
+  }
 }

@@ -132,7 +132,7 @@ export function Cart() {
               )
             )}
             <div className="CartInfo">
-              <h2>Total: R$ {totalPrice}</h2>
+              <h2>Total: R$ {totalPrice || 0}</h2>
             </div>
             <div className="CartOptions">
               <LoaderButton

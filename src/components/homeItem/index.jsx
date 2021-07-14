@@ -23,14 +23,14 @@ export function Item({ itemId, imgUrl, name, price, quantity }) {
   }
 
   return (
-    <div className="Item">
+    <div className="HomeItem">
       <Link to="/a">
-        <img className="ItemImage" src={imgUrl} alt="" />
+        <img className="HomeItemImage" src={imgUrl} alt="" />
       </Link>
-      <div className="ItemBody">
-        <b className="ItemName">{name}</b>
-        <b className="ItemPrice">R$ {price}</b>
-        <button className="ItemAdd" onClick={handleItemAdd}>
+      <div className="HomeItemBody">
+        <b className="HomeItemName">{name}</b>
+        <b className="HomeItemPrice">R$ {price}</b>
+        <button className="HomeItemAdd" onClick={handleItemAdd}>
           Adicionar
         </button>
       </div>

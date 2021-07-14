@@ -1,7 +1,7 @@
 .CartItem {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 44px;
 
@@ -20,16 +20,23 @@
     max-height: 100px;
   }
 
-  .CartItemQuantity {
-    font-size: 1.125rem;
-    font-weight: 700;
+  div {
     display: flex;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #333;
+    flex-direction: row;
+    gap: 26px;
+    white-space: nowrap;
 
-    &::-webkit-inner-spin-button {
-      opacity: 1;
+    .CartItemQuantity {
+      font-size: 1.125rem;
+      font-weight: 700;
+      display: flex;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #333;
+
+      &::-webkit-inner-spin-button {
+        opacity: 1;
+      }
     }
   }
 
@@ -39,6 +46,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    white-space: nowrap;
 
     &:hover {
       color: var(--red);
@@ -46,6 +54,37 @@
 
     &:active {
       color: var(--red);
+    }
+  }
+}
+
+@media (max-width: 688px) {
+  .CartItem {
+    position: relative;
+    flex-direction: column !important;
+    gap: 20px !important;
+    font-size: 1.5rem;
+
+    .CartItemName {
+      text-align: center;
+    }
+
+    .CartItemQuantity {
+      font-size: 1.5rem !important;
+    }
+
+    .CartItemImage {
+      max-height: 140px;
+    }
+
+    .CartItemDelete {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+
+      svg {
+        font-size: 2.5rem !important;
+      }
     }
   }
 }

@@ -29,8 +29,9 @@ export function CartItem({
     <div className="CartItem">
       <img className="CartItemImage" src={imgUrl} alt="" />
       <b className="CartItemName">{name}</b>
+
       <div>
-        <b className="CartItemPrice">R$ {price}</b>
+        <b className="CartItemPrice">R$ {price.toFixed(2)}</b>
         <input
           className="CartItemQuantity"
           type="number"
@@ -39,7 +40,7 @@ export function CartItem({
           min={1}
           max={totalQuantity}
         />
-        <b className="CartItemTotalPrice">R$ {price * (tempQuantity || 0)}</b>
+        <b className="CartItemTotalPrice">R$ {(price * (tempQuantity || 0)).toFixed(2)}</b>
       </div>
 
       <button className="CartItemDelete" onClick={handleDelete}>

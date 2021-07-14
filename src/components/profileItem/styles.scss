@@ -31,7 +31,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 
     .ProfileItemImage {
       max-width: 80px;
@@ -41,7 +41,7 @@
     .ProfileItemName {
       flex-grow: 2;
       word-wrap: break-word;
-      text-align: center;
+      font-weight: 500;
     }
 
     div {
@@ -66,6 +66,7 @@
       .ProfileItemName {
         font-size: 1.25rem;
         width: 60%;
+        text-align: center;
       }
 
       div {

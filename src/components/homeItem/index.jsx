@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
-export function Item({ itemId, imgUrl, name, price, quantity }) {
+export function HomeItem({ itemId, imgUrl, name, price, quantity }) {
   function handleItemAdd() {
     const itemInfo = {
       itemId,
@@ -24,12 +24,12 @@ export function Item({ itemId, imgUrl, name, price, quantity }) {
 
   return (
     <div className="HomeItem">
-      <Link to="/a">
+      <Link to={`/item/${itemId}`}>
         <img className="HomeItemImage" src={imgUrl} alt="" />
       </Link>
       <div className="HomeItemBody">
         <b className="HomeItemName">{name}</b>
-        <b className="HomeItemPrice">R$ {price}</b>
+        <b className="HomeItemPrice">R$ {price.toFixed(2)}</b>
         <button className="HomeItemAdd" onClick={handleItemAdd}>
           Adicionar
         </button>

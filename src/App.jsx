@@ -11,6 +11,7 @@ import { Register } from './pages/register';
 import { ForgotPassword } from './pages/forgotPassword';
 import { Cart } from './pages/cart';
 import { Profile } from './pages/profile';
+import { ItemPage } from './pages/itemPage';
 import { NotFound } from './pages/notFound';
 
 export function App() {
@@ -54,6 +55,7 @@ export function App() {
             <Route path="/forgot-password" exact component={ForgotPassword} />
             <PrivateRoute path="/profile" exact component={Profile} />
             <Route path="/cart" exact component={Cart} />
+            <Route path="/item/:itemId" component={ItemPage} />
             <Route component={NotFound} />
           </Switch>
         </AppContext.Provider>

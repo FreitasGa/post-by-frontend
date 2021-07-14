@@ -52,17 +52,18 @@ export function Login() {
                 placeholder="E-mail"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
-                autoFocus
+                required
               />
               <input
                 type="password"
                 placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                required
               />
             </div>
             <Link to="/forgot-password" className="LoginForgotPassword">
-              Esqueci a senha?
+              Esqueceu a senha?
             </Link>
             <LoaderButton
               type="submit"

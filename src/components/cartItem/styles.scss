@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 44px;
+  gap: 20px;
 
   background-color: var(--white);
 
@@ -17,7 +17,14 @@
   transition: ease all 0.5s;
 
   .CartItemImage {
-    max-height: 100px;
+    max-width: 100px;
+    flex-grow: 1;
+  }
+
+  .CartItemName {
+    flex-grow: 2;
+    word-wrap: break-word;
+    font-weight: 500;
   }
 
   div {
@@ -47,6 +54,7 @@
     outline: none;
     cursor: pointer;
     white-space: nowrap;
+    padding-right: 8px;
 
     &:hover {
       color: var(--red);
@@ -81,6 +89,7 @@
       position: absolute;
       right: 12px;
       top: 12px;
+      padding: 0;
 
       svg {
         font-size: 2.5rem !important;

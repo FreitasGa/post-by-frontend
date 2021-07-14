@@ -69,7 +69,7 @@ export function ForgotPassword() {
               placeholder="E-mail"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
-              autoFocus
+              required
             />
           </div>
           <LoaderButton
@@ -97,19 +97,21 @@ export function ForgotPassword() {
               placeholder="Senha"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
-              autoFocus
+              required
             />
             <input
               type="password"
               placeholder="Confirme a Senha"
               onChange={(e) => setConfirmPassword(e.target.value)}
               value={confirmPassword}
+              required
             />
             <input
               type="text"
               placeholder="Codigo"
               onChange={(e) => setCode(e.target.value)}
               value={code}
+              required
             />
           </div>
           <LoaderButton

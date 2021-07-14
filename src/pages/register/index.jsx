@@ -85,25 +85,28 @@ export function Register() {
               placeholder="Nome"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              autoFocus
+              required
             />
             <input
               type="email"
               placeholder="E-mail"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
+              required
             />
             <input
               type="password"
               placeholder="Senha"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
+              required
             />
             <input
               type="password"
               placeholder="Confirme a Senha"
               onChange={(e) => setConfirmPassword(e.target.value)}
               value={confirmPassword}
+              required
             />
           </div>
           <LoaderButton
@@ -132,7 +135,7 @@ export function Register() {
               placeholder="Codigo de confirmação"
               onChange={(e) => setConfirmationCode(e.target.value)}
               value={confirmationCode}
-              autoFocus
+              required
             />
           </div>
           <LoaderButton

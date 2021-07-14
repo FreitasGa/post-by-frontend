@@ -63,7 +63,7 @@ export function Profile() {
           </div>
           <div className="ReserveHistory">
             {reserves.length === 0 ? (
-              <div className="ReserveHistorylaceholder">
+              <div className="ReserveHistoryPlaceholder">
                 <h2>Para que você ainda não fez reservas.</h2>
                 <Link to="/">Ir as compras</Link>
               </div>

@@ -36,10 +36,60 @@
 
     box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
     transition: ease all 0.5s;
+
+    b {
+      font-weight: 500;
+    }
   }
 
   .ReserveHistory {
     width: 100%;
+
+    .ReserveHistoryPlaceholder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+
+      background-color: var(--white);
+
+      padding: 1.2rem;
+      border-radius: 8px;
+
+      font-size: 1.125rem;
+      font-weight: 600;
+
+      box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
+      transition: ease all 0.5s;
+
+      h2 {
+        font-weight: 700;
+        transition: ease all 0.5s;
+        text-align: center;
+      }
+
+      a {
+        font-size: 18px;
+
+        background-color: var(--red);
+        color: var(--white);
+        text-decoration: none;
+
+        padding: 8px 20px;
+        border-radius: 9999px;
+
+        transition: ease all 0.5s;
+
+        &:hover {
+          background-color: var(--red-dark);
+        }
+
+        &:active {
+          background-color: var(--red-dark);
+        }
+      }
+    }
 
     .ReserveHistoryItems {
       display: flex;

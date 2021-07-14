@@ -13,9 +13,9 @@ export function ProfileItem({ items, reserveId, totalPrice, totalQuantity }) {
             <img className="ProfileItemImage" src={imgUrl} alt="" />
             <b className="ProfileItemName">{name}</b>
             <div>
-              <b className="ProfileItemPrice">R$ {price}</b>
+              <b className="ProfileItemPrice">R$ {price.toFixed(2)}</b>
               <b className="ProfileItemQuantity">{quantity}</b>
-              <b className="ProfileItemTotalPrice">R$ {TotalPrice}</b>
+              <b className="ProfileItemTotalPrice">R$ {TotalPrice.toFixed(2)}</b>
             </div>
           </div>
         ))}

@@ -5,7 +5,7 @@ import { API } from 'aws-amplify';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 import { Header } from '../../components/header';
-import { Item } from '../../components/homeItem';
+import { HomeItem } from '../../components/homeItem';
 import './styles.scss';
 
 export function Home() {
@@ -33,7 +33,7 @@ export function Home() {
         <h1>Produtos</h1>
         <div className="Items">
           {items.map(({ itemId, imgUrl, name, price, quantity }) => (
-            <Item
+            <HomeItem
               key={itemId}
               itemId={itemId}
               imgUrl={imgUrl}

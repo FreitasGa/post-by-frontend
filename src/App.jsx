@@ -8,6 +8,8 @@ import { AppContext } from './libs/contextLib';
 import { Home } from './pages/home';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
+import { ForgotPassword } from './pages/forgotPassword';
+import { Cart } from './pages/cart';
 import { NotFound } from './pages/notFound';
 
 export function App() {
@@ -37,6 +39,8 @@ export function App() {
             <Route path="/" exact component={Home} />
             <Route path="/login" exact component={Login} />
             <Route path="/register" exact component={Register} />
+            <Route path="/forgot-password" exact component={ForgotPassword} />
+            <Route path="/cart" exact component={Cart} />
             <Route component={NotFound} />
           </Switch>
         </AppContext.Provider>

@@ -1,20 +1,23 @@
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
-import postit from '../../assets/post-it-sp-amarelo.jpg';
 import './styles.scss';
 
-export function Item({ imgUrl, name, price }) {
+export function Item({ itemId, imgUrl, name, price, quantity }) {
   function handleItemAdd() {
     const itemInfo = {
+      itemId,
+      imgUrl,
       name,
-      price: parseFloat(price),
+      price,
       quantity: 1,
+      totalQuantity: quantity,
+      TotalPrice: price,
     };
 
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const cart = JSON.parse(localStorage.getItem('post-by/cart') || '[]');
     cart.push(itemInfo);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('post-by/cart', JSON.stringify(cart));
 
     toast.success('Item adicionado ao carrinho');
   }
@@ -22,7 +25,7 @@ export function Item({ imgUrl, name, price }) {
   return (
     <div className="Item">
       <Link to="/a">
-        <img className="ItemImage" src={postit} alt="post-it amarelo" />
+        <img className="ItemImage" src={imgUrl} alt="" />
       </Link>
       <div className="ItemBody">
         <b className="ItemName">{name}</b>

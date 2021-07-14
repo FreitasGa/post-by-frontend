@@ -61,7 +61,7 @@ export function Login() {
                 value={password}
               />
             </div>
-            <Link to="/login" className="LoginForgotPassword">
+            <Link to="/forgot-password" className="LoginForgotPassword">
               Esqueci a senha?
             </Link>
             <LoaderButton

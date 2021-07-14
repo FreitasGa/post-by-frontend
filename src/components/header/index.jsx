@@ -35,6 +35,7 @@ export function Header() {
     await Auth.signOut();
 
     userHasAuthenticated(false);
+    localStorage.removeItem('post-by/cart');
     toast('Saiu da conta');
     history.push('/');
   }
@@ -58,6 +59,7 @@ export function Header() {
         ) : (
           <div className="HeaderLinks">
             <Link to="/">Inicio</Link>
+            <Link to="/cart">Carrinho</Link>
             <Link to="/login">Entrar</Link>
             <Link to="/register">Cadastro</Link>
           </div>
@@ -95,6 +97,7 @@ export function Header() {
           ) : (
             <div className="HeaderDrawerLinks">
               <Link to="/">Inicio</Link>
+              <Link to="/cart">Carrinho</Link>
               <Link to="/login">Entrar</Link>
               <Link to="/register">Cadastro</Link>
             </div>

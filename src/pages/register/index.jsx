@@ -46,16 +46,15 @@ export function Register() {
           name: name,
         },
       });
-      setIsLoading(false);
       setNewUser(newUser);
     } catch (error) {
-      setIsLoading(false);
       toast.error(error.message);
       setName('');
       setEmail('');
       setPassword('');
       setConfirmPassword('');
     }
+    setIsLoading(false);
   }
 
   async function handleConfirmationSubmit(event) {
@@ -65,15 +64,14 @@ export function Register() {
       await Auth.confirmSignUp(email, confirmationCode);
       await Auth.signIn(email, password);
       userHasAuthenticated(true);
-      setIsLoading(false);
       history.push('/');
       toast.success('Conta criada com sucesso!');
     } catch (error) {
-      setIsLoading(false);
       toast.error(error.message);
       setEmail('');
       setPassword('');
     }
+    setIsLoading(false);
   }
 
   function RegisterForm() {

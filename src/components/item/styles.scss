@@ -3,8 +3,8 @@
 
   display: flex;
   flex-direction: column;
-  
-  max-width: 14.375rem;
+  justify-content: space-between;
+
   padding: 1rem;
   border-radius: 8px;
 
@@ -14,11 +14,9 @@
   .ItemImage {
     display: block;
     align-self: center;
+    margin: 0;
 
-    aspect-ratio: 15/17;
     max-height: 14rem;
-    width: auto;
-    height: auto;
   }
 
   .ItemBody {
@@ -28,6 +26,7 @@
     .ItemName {
       font-size: 1.125rem;
       font-weight: 500;
+      max-width: 14.375rem;
 
       word-wrap: break-word;
 

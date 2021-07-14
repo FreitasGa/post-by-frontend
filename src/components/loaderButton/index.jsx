@@ -6,6 +6,7 @@ export function LoaderButton(props) {
     <button
       disabled={props.disabled || props.isLoading}
       className={`LoaderButton ${props.className}`}
+      onClick={props.onClick}
     >
       {props.isLoading && <LoopIcon className="LoaderSpinning" />}
       {props.children}

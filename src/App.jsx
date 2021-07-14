@@ -10,6 +10,7 @@ import { Login } from './pages/login';
 import { Register } from './pages/register';
 import { ForgotPassword } from './pages/forgotPassword';
 import { Cart } from './pages/cart';
+import { Profile } from './pages/profile';
 import { NotFound } from './pages/notFound';
 
 export function App() {
@@ -30,6 +31,17 @@ export function App() {
     }
   }
 
+  function PrivateRoute({ component: Component, ...rest }) {
+    return (
+      <Route
+        {...rest}
+        render={(props) => {
+          return isAuthenticated ? <Component {...props} /> : <NotFound />;
+        }}
+      />
+    );
+  }
+
   return (
     <>
       <Toaster position="top-center" />
@@ -40,6 +52,7 @@ export function App() {
             <Route path="/login" exact component={Login} />
             <Route path="/register" exact component={Register} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
+            <PrivateRoute path="/profile" exact component={Profile} />
             <Route path="/cart" exact component={Cart} />
             <Route component={NotFound} />
           </Switch>

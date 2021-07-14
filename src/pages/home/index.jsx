@@ -6,7 +6,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useAppContext } from '../../libs/contextLib';
 
 import { Header } from '../../components/header';
-import { Item } from '../../components/item';
+import { Item } from '../../components/homeItem';
 import './styles.scss';
 
 export function Home() {

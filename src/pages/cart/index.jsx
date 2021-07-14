@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { API, Auth } from 'aws-amplify';
 import toast from 'react-hot-toast';
@@ -19,8 +19,20 @@ export function Cart() {
   const [items, setItems] = useState(cartItems || []);
   const [state, setState] = useState(false);
   const [email, setEmail] = useState(false);
-
+  const [totalPrice, setTotalPrice] = useState();
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    getUserEmail();
+    
+    if (items.length > 0) {
+      const { TotalPrice } = items.reduce((a, b) => ({
+        TotalPrice: a.TotalPrice + b.TotalPrice,
+      }));
+
+      setTotalPrice(TotalPrice);
+    }
+  }, [state, items]);
 
   function handleUpdate(index, price, quantity) {
     setState(!state);
@@ -119,6 +131,9 @@ export function Cart() {
                 />
               )
             )}
+            <div className="CartInfo">
+              <h2>Total: R$ {totalPrice}</h2>
+            </div>
             <div className="CartOptions">
               <LoaderButton
                 className="CartReserve"

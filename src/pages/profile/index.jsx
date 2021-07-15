@@ -49,7 +49,7 @@ export function Profile() {
     <>
       <Header />
       <div className="ProfileBody">
-        <h1>Profile</h1>
+        <h1>Perfil</h1>
         <div className="ProfileWrapper">
           <div className="ProfileCard">
             <PersonIcon className="ProfileIcon" fontSize="large" />

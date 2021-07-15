@@ -9,9 +9,9 @@
   background-color: $white;
   padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
   font-size: 1.125rem;
   font-weight: 600;
-  box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
   transition: ease all 0.5s;
 
   .CartItemImage {
@@ -32,13 +32,13 @@
     white-space: nowrap;
 
     .CartItemQuantity {
-      font-size: 1.125rem;
-      font-weight: 700;
       display: flex;
+      color: $grey-black;
       outline: none;
       border: none;
-      color: $grey-black;
       border-bottom: 1px solid $grey-black;
+      font-size: 1.125rem;
+      font-weight: 700;
 
       &::-webkit-inner-spin-button {
         opacity: 1;
@@ -51,9 +51,9 @@
     background: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
-    white-space: nowrap;
     padding-right: 8px;
+    white-space: nowrap;
+    cursor: pointer;
 
     &:hover {
       color: $red;

@@ -1,24 +1,21 @@
 @import '../../global.scss';
 
 .ItemPageBody {
+  display: flex;
+  justify-content: center;
   color: $grey-black;
   padding: 0 17.5rem;
   margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
 
   .ItemPageItem {
-    background-color: $white;
-
     display: flex;
     flex-direction: row;
     gap: 34px;
-
+    background-color: $white;
     margin: 3rem 0;
     padding: 1rem;
     width: fit-content;
     border-radius: 8px;
-
     box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
     transition: ease all 0.5s;
 
@@ -63,16 +60,13 @@
       .ItemPageAdd {
         color: $white;
         background-color: $red;
-
-        font-size: 1.45rem;
-        font-weight: 600;
-
         height: 52px;
         border-radius: 8px;
-
-        cursor: pointer;
         border: none;
         outline: none;
+        font-size: 1.45rem;
+        font-weight: 600;
+        cursor: pointer;
         transition: ease all 0.5s;
 
         &:hover {
@@ -93,7 +87,6 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-
   height: 70vh;
 
   h2 {
@@ -101,15 +94,12 @@
   }
 
   a {
-    font-size: 18px;
-
-    background-color: $red;
     color: $white;
-    text-decoration: none;
-
+    background-color: $red;
     padding: 8px 20px;
     border-radius: 9999px;
-
+    text-decoration: none;
+    font-size: 18px;
     transition: ease all 0.5s;
 
     &:hover {
@@ -155,8 +145,8 @@
 
     h2 {
       align-self: center;
-      text-align: center;
       width: 90%;
+      text-align: center;
     }
 
     b {

@@ -1,27 +1,24 @@
-.LoginWrapper {
-  margin: 8.75rem 0;
-  min-height: fit-content;
+@import '../../global.scss';
 
+.LoginWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin: 8.75rem 0;
+  min-height: fit-content;
   transition: ease all 0.5s;
 }
 
 .LoginBody {
-  color: #333;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  color: $grey-black;
   min-height: fit-content;
   padding: 0 17.5rem;
   gap: 20px;
-
   transition: ease all 0.5s;
 
   h1 {
@@ -31,18 +28,17 @@
 
   a {
     color: inherit;
+    border-bottom: 1px dashed $grey-black;
     text-decoration: none;
-    border-bottom: 1px dashed #333;
-
     transition: ease all 0.5s;
 
     &:hover {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid $grey-black;
     }
 
     &:active {
-      color: var(--red);
-      border-bottom: 1px solid var(--red);
+      color: $red;
+      border-bottom: 1px solid $red;
     }
   }
 }
@@ -50,75 +46,66 @@
 .LoginForm {
   display: flex;
   flex-direction: column;
-
   gap: 12px;
 
   .LoginFormInput {
     display: flex;
     flex-direction: column;
-
     gap: 10px;
 
     input {
       width: 320px;
       height: 48px;
       border-radius: 8px;
-
+      border: 1px solid rgba($color: $black, $alpha: 0.1);
+      outline: none;
+      padding: 8px 12px;
       font-size: 1.125rem;
       font-weight: 600;
-
-      border: 1px solid rgba($color: #000000, $alpha: 0.1);
-      outline: none;
       transition: ease all 0.5s;
 
-      padding: 8px 12px;
-
       &:focus {
-        border: 2px solid var(--red);
+        border: 2px solid $red;
       }
     }
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dashed #333;
-
     align-self: flex-end;
+    color: inherit;
+    border-bottom: 1px dashed $grey-black;
+    text-decoration: none;
     transition: ease all 0.5s;
 
     &:hover {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid $grey-black;
     }
 
     &:active {
-      color: var(--red);
-      border-bottom: 1px solid var(--red);
+      color: $red;
+      border-bottom: 1px solid $red;
     }
   }
 
   .LoginSubmit {
-    color: var(--white);
-    background-color: var(--red);
-
-    font-size: 1.5rem;
-    font-weight: 700;
-
+    color: $white;
+    background-color: $red;
     width: 320px;
     height: 52px;
     border-radius: 8px;
-
     border: none;
     outline: none;
+    font-size: 1.5rem;
+    font-weight: 700;
     cursor: pointer;
     transition: ease all 0.5s;
 
     &:hover {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
 
     &:active {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
   }
 }

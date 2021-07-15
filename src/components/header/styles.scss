@@ -1,16 +1,13 @@
 @import '../../global.scss';
 
 .Header {
-  background-color: $white-grey;
-  color: $grey-black;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  background-color: $white-grey;
+  color: $grey-black;
   height: 8.125rem;
   padding: 0 17.5rem;
-
   transition: ease all 0.5s;
 }
 
@@ -25,11 +22,9 @@
 
   a {
     color: inherit;
-
     font-weight: 600;
     font-size: 1.125rem;
     text-decoration: none;
-
     -webkit-user-drag: none;
     transition: ease all 0.5s;
 
@@ -45,10 +40,8 @@
     &:last-child {
       color: $white;
       background-color: $red;
-
       padding: 8px 16px;
       border-radius: 9999px;
-
       transition: ease all 0.5s;
     }
 
@@ -83,15 +76,12 @@
   button {
     color: $red;
     background: none;
-
     height: 55px;
     width: 55px;
     padding: 10px;
-
     border: none;
     border-radius: 100%;
     cursor: pointer;
-
     transition: ease all 0.5s;
 
     &:active {
@@ -104,11 +94,9 @@
 .HeaderDrawerLinks {
   display: flex;
   flex-direction: column;
-
+  gap: 10px;
   width: 200px;
   padding: 30px 0;
-  gap: 10px;
-
   transition: ease all 0.5s;
 
   a {
@@ -116,18 +104,14 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
     color: inherit;
     background: none;
-
+    padding: 8px 20px;
+    border: none;
     font-weight: 600;
     font-size: 1.5rem;
     text-decoration: none;
-
-    padding: 8px 20px;
-    border: none;
     cursor: pointer;
-
     -webkit-user-drag: none;
     transition: ease all 0.5s;
 
@@ -142,18 +126,14 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-
     color: inherit;
     background: none;
-
+    padding: 8px 20px;
+    border: none;
     font-weight: 600;
     font-size: 1.5rem;
     text-decoration: none;
-
-    padding: 8px 20px;
-    border: none;
     cursor: pointer;
-
     -webkit-user-drag: none;
     transition: ease all 0.5s;
 

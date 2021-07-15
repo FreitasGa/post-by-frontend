@@ -1,42 +1,36 @@
 @import '../../global.scss';
 
 .RegisterWrapper {
-  margin: 8.75rem 0;
-  min-height: fit-content;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin: 8.75rem 0;
+  min-height: fit-content;
   transition: ease all 0.5s;
 }
 
 .RegisterBody {
-  color: $grey-black;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  gap: 20px;
+  color: $grey-black;
   min-height: fit-content;
   padding: 0 17.5rem;
-  gap: 20px;
-
   transition: ease all 0.5s;
 
   h1 {
+    align-self: center;
     font-weight: 700;
     transition: ease all 0.5s;
-    align-self: center;
   }
 
   a {
     color: inherit;
-    text-decoration: none;
     border-bottom: 1px dashed $grey-black;
-
+    text-decoration: none;
     transition: ease all 0.5s;
 
     &:hover {
@@ -53,24 +47,20 @@
 .RegisterForm {
   display: flex;
   flex-direction: column;
-
   gap: 24px;
 
   .RegisterFormInput {
     display: flex;
     flex-direction: column;
-
     gap: 14px;
 
     p {
+      align-self: center;
+      width: 300px;
       font-weight: 600;
       font-size: 1.125rem;
-
-      width: 300px;
-      word-wrap: wrap;
       text-align: center;
-      align-self: center;
-
+      word-wrap: wrap;
       transition: ease all 0.5s;
     }
 
@@ -78,15 +68,12 @@
       width: 320px;
       height: 48px;
       border-radius: 8px;
-
-      font-size: 1.125rem;
-      font-weight: 600;
-
       border: 1px solid rgba($color: $black, $alpha: 0.1);
       outline: none;
-      transition: ease all 0.5s;
-
       padding: 8px 12px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      transition: ease all 0.5s;
 
       &:focus {
         border: 2px solid $red;
@@ -95,11 +82,10 @@
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dashed $grey-black;
-
     align-self: flex-end;
+    color: inherit;
+    border-bottom: 1px dashed $grey-black;
+    text-decoration: none;
     transition: ease all 0.5s;
 
     &:hover {
@@ -115,16 +101,13 @@
   .RegisterSubmit {
     color: $white;
     background-color: $red;
-
-    font-size: 1.5rem;
-    font-weight: 700;
-
     width: 320px;
     height: 52px;
     border-radius: 8px;
-
     border: none;
     outline: none;
+    font-size: 1.5rem;
+    font-weight: 700;
     cursor: pointer;
     transition: ease all 0.5s;
 

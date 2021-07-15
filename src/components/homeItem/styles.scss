@@ -5,40 +5,51 @@
   flex-direction: column;
   justify-content: space-between;
 
+  width: 324px;
   padding: 1rem;
   border-radius: 8px;
+  gap: 12px;
 
   box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
   transition: ease all 0.5s;
 
   a {
     align-self: center;
-
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
     .HomeItemImage {
       display: block;
       margin: 0;
-
+      
       max-height: 14rem;
     }
   }
-
+  
   .HomeItemBody {
     display: flex;
     flex-direction: column;
-
+    
     .HomeItemName {
+      color: #333;
+
       font-size: 1.125rem;
       font-weight: 500;
-      max-width: 14.375rem;
+      width: 90%;
+      align-self: center;
+      text-align: center;
 
       word-wrap: break-word;
-
-      margin: 10px 0 5px;
+      margin: 0 0 8px 0;
     }
 
     .HomeItemPrice {
+      width: 90%;
       font-size: 1.5rem;
       font-weight: 700;
+      text-align: end;
+      align-self: center;
 
       margin-bottom: 10px;
     }
@@ -85,7 +96,7 @@
 
 @media (max-width: 688px) {
   .HomeItemName {
-    font-size: 1.25rem !important;
+    font-size: 1.4rem !important;
   }
 
   .HomeItemPrice {

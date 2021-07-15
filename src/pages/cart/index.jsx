@@ -17,12 +17,13 @@ export function Cart() {
   const cartItems = JSON.parse(localStorage.getItem('post-by/cart'));
   const [items, setItems] = useState(cartItems || []);
   const [state, setState] = useState(false);
+  const [name, setName] = useState(false);
   const [email, setEmail] = useState(false);
   const [totalPrice, setTotalPrice] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    getUserEmail();
+    getUserAttributes();
 
     if (items.length > 0) {
       const { TotalPrice } = items.reduce((a, b) => ({
@@ -67,8 +68,8 @@ export function Cart() {
 
     setIsLoading(true);
     try {
-      await getUserEmail();
-      await sendEmail(email);
+      await getUserAttributes();
+      await sendEmail(email, name);
       const reserveObj = {
         userEmail: email,
         items,
@@ -85,14 +86,15 @@ export function Cart() {
     setIsLoading(false);
   }
 
-  async function getUserEmail() {
+  async function getUserAttributes() {
     const user = await Auth.currentAuthenticatedUser();
+    setName(user.attributes.name);
     setEmail(user.attributes.email);
   }
 
-  function sendEmail(userEmail) {
+  function sendEmail(userEmail, userName) {
     return API.post('post-by', '/email', {
-      body: { userEmail },
+      body: { userEmail, userName },
     });
   }
 

@@ -40,7 +40,9 @@ export function CartItem({
           min={1}
           max={totalQuantity}
         />
-        <b className="CartItemTotalPrice">R$ {(price * (tempQuantity || 0)).toFixed(2)}</b>
+        <b className="CartItemTotalPrice">
+          R$ {(price * (tempQuantity || 0)).toFixed(2)}
+        </b>
       </div>
 
       <button className="CartItemDelete" onClick={handleDelete}>

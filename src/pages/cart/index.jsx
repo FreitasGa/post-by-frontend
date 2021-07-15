@@ -3,12 +3,11 @@ import { Link, useHistory } from 'react-router-dom';
 import { API, Auth } from 'aws-amplify';
 import toast from 'react-hot-toast';
 
-import DeleteIcon from '@material-ui/icons/Delete';
 import { useAppContext } from '../../libs/contextLib';
-
 import { Header } from '../../components/header';
 import { CartItem } from '../../components/cartItem';
 import { LoaderButton } from '../../components/loaderButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import './styles.scss';
 
 export function Cart() {
@@ -81,7 +80,7 @@ export function Cart() {
       toast.success('Reserva Criada');
       history.push('/');
     } catch (error) {
-      console.log(error);
+      console.error(error.message);
     }
     setIsLoading(false);
   }
@@ -92,7 +91,6 @@ export function Cart() {
   }
 
   function sendEmail(userEmail) {
-    console.log(userEmail);
     return API.post('post-by', '/email', {
       body: { userEmail },
     });

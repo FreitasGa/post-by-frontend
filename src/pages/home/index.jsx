@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { API } from 'aws-amplify';
 
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-
 import { Header } from '../../components/header';
 import { HomeItem } from '../../components/homeItem';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './styles.scss';
 
 export function Home() {
@@ -19,7 +18,7 @@ export function Home() {
         setItems(items);
         sessionStorage.setItem('post-by/items', JSON.stringify(items));
       } catch (error) {
-        console.log(error.message);
+        console.error(error.message);
       }
     }
 

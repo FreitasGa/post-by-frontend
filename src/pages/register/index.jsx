@@ -6,7 +6,6 @@ import toast from 'react-hot-toast';
 import { useAppContext } from '../../libs/contextLib';
 import { Header } from '../../components/header';
 import { LoaderButton } from '../../components/loaderButton';
-
 import './styles.scss';
 
 export function Register() {
@@ -48,6 +47,7 @@ export function Register() {
       });
       setNewUser(newUser);
     } catch (error) {
+      console.error(error.message)
       toast.error(error.message);
       setName('');
       setEmail('');
@@ -67,6 +67,7 @@ export function Register() {
       history.push('/');
       toast.success('Conta criada com sucesso!');
     } catch (error) {
+      console.error(error.message)
       toast.error(error.message);
       setEmail('');
       setPassword('');

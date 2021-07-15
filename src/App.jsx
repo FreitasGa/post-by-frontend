@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import { Auth } from 'aws-amplify';
+import { Toaster } from 'react-hot-toast';
 
 import { AppContext } from './libs/contextLib';
-
 import { Home } from './pages/home';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
@@ -27,7 +26,7 @@ export function App() {
       userHasAuthenticated(true);
     } catch (error) {
       if (error !== 'No current user') {
-        console.log(error);
+        console.error(error.message);
       }
     }
   }

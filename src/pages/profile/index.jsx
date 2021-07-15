@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { API, Auth } from 'aws-amplify';
-import toast from 'react-hot-toast';
 
-import PersonIcon from '@material-ui/icons/Person';
 import { useAppContext } from '../../libs/contextLib';
-
 import { Header } from '../../components/header';
-import './styles.scss';
 import { ProfileItem } from '../../components/profileItem';
+import PersonIcon from '@material-ui/icons/Person';
+import './styles.scss';
 
 export function Profile() {
   const { isAuthenticated } = useAppContext();
@@ -33,11 +31,10 @@ export function Profile() {
         setReserves(reserves);
         sessionStorage.setItem('post-by/reserves', JSON.stringify(reserves));
       } catch (error) {
-        console.log(error);
+        console.error(error.message);
       }
     }
 
-    console.log(reserves);
     onLoad();
   }, [isAuthenticated]);
 

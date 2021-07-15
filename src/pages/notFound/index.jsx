@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Header } from '../../components/header';
 
+import { Header } from '../../components/header';
 import './styles.scss';
 
 export function NotFound() {

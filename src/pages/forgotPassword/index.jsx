@@ -37,8 +37,8 @@ export function ForgotPassword() {
     try {
       const newPassword = await Auth.forgotPassword(email);
       setNewPassword(newPassword);
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.error(error.message);
     }
     setIsLoading(false);
   }
@@ -51,8 +51,8 @@ export function ForgotPassword() {
       await Auth.forgotPasswordSubmit(email, code, password);
       toast.success('Senha alterada');
       history.push('/login');
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.error(error.message);
     }
     setIsLoading(false);
   }
@@ -89,7 +89,10 @@ export function ForgotPassword() {
     return (
       <div className="ForgotPasswordBody">
         <h1>Nova senha</h1>
-        <form className="ForgotPasswordForm" onSubmit={handleConfirmationSubmit}>
+        <form
+          className="ForgotPasswordForm"
+          onSubmit={handleConfirmationSubmit}
+        >
           <div className="ForgotPasswordFormInput">
             <p>Verifique o código que foi enviado ao seu e-mail</p>
             <input

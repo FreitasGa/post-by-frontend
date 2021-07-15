@@ -9,13 +9,15 @@ export function ProfileItem({ items, reserveId, totalPrice, totalQuantity }) {
 
       <div className="ProfileItemList">
         {items.map(({ imgUrl, name, quantity, price, TotalPrice }, index) => (
-          <div className="ProfileItem">
+          <div className="ProfileItem" key={index}>
             <img className="ProfileItemImage" src={imgUrl} alt="" />
             <b className="ProfileItemName">{name}</b>
             <div>
               <b className="ProfileItemPrice">R$ {price.toFixed(2)}</b>
               <b className="ProfileItemQuantity">{quantity}</b>
-              <b className="ProfileItemTotalPrice">R$ {TotalPrice.toFixed(2)}</b>
+              <b className="ProfileItemTotalPrice">
+                R$ {TotalPrice.toFixed(2)}
+              </b>
             </div>
           </div>
         ))}

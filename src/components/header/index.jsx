@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import toast from 'react-hot-toast';
 import { Auth } from 'aws-amplify';
+import toast from 'react-hot-toast';
 
 import { useAppContext } from '../../libs/contextLib';
 

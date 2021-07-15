@@ -15,9 +15,8 @@ export function ItemPage() {
       try {
         const item = await API.get('post-by', `/item/${itemId}`);
         setItem(item);
-        console.log(item);
       } catch (error) {
-        console.log(error);
+        console.error(error.message);
       }
     }
 

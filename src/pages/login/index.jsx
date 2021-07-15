@@ -4,10 +4,8 @@ import { Auth } from 'aws-amplify';
 import toast from 'react-hot-toast';
 
 import { useAppContext } from '../../libs/contextLib';
-
 import { Header } from '../../components/header';
 import { LoaderButton } from '../../components/loaderButton';
-
 import './styles.scss';
 
 export function Login() {

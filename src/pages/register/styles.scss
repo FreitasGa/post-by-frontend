@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .RegisterWrapper {
   margin: 8.75rem 0;
   min-height: fit-content;
@@ -11,7 +13,7 @@
 }
 
 .RegisterBody {
-  color: #333;
+  color: $grey-black;
 
   display: flex;
   flex-direction: column;
@@ -33,17 +35,17 @@
   a {
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px dashed #333;
+    border-bottom: 1px dashed $grey-black;
 
     transition: ease all 0.5s;
 
     &:hover {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid $grey-black;
     }
 
     &:active {
-      color: var(--red);
-      border-bottom: 1px solid var(--red);
+      color: $red;
+      border-bottom: 1px solid $red;
     }
   }
 }
@@ -80,14 +82,14 @@
       font-size: 1.125rem;
       font-weight: 600;
 
-      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+      border: 1px solid rgba($color: $black, $alpha: 0.1);
       outline: none;
       transition: ease all 0.5s;
 
       padding: 8px 12px;
 
       &:focus {
-        border: 2px solid var(--red);
+        border: 2px solid $red;
       }
     }
   }
@@ -95,24 +97,24 @@
   a {
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px dashed #333;
+    border-bottom: 1px dashed $grey-black;
 
     align-self: flex-end;
     transition: ease all 0.5s;
 
     &:hover {
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid $grey-black;
     }
 
     &:active {
-      color: var(--red);
-      border-bottom: 1px solid var(--red);
+      color: $red;
+      border-bottom: 1px solid $red;
     }
   }
 
   .RegisterSubmit {
-    color: var(--white);
-    background-color: var(--red);
+    color: $white;
+    background-color: $red;
 
     font-size: 1.5rem;
     font-weight: 700;
@@ -127,11 +129,11 @@
     transition: ease all 0.5s;
 
     &:hover {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
 
     &:active {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
   }
 }

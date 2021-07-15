@@ -1,5 +1,7 @@
+@import '../../global.scss';
+
 .CartBody {
-  color: #333;
+  color: $grey-black;
 
   display: flex;
   flex-direction: column;
@@ -32,8 +34,8 @@
     a {
       font-size: 18px;
 
-      background-color: var(--red);
-      color: var(--white);
+      background-color: $red;
+      color: $white;
       text-decoration: none;
 
       padding: 8px 20px;
@@ -42,11 +44,11 @@
       transition: ease all 0.5s;
 
       &:hover {
-        background-color: var(--red-dark);
+        background-color: $red-dark;
       }
 
       &:active {
-        background-color: var(--red-dark);
+        background-color: $red-dark;
       }
     }
   }
@@ -58,8 +60,8 @@
   }
 
   .CartInfo {
-    color: #333;
-    background-color: var(--white);
+    color: $grey-black;
+    background-color: $white;
 
     display: flex;
     flex-direction: row;
@@ -68,7 +70,7 @@
 
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
+    box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
     transition: ease all 0.5s;
   }
 
@@ -79,11 +81,11 @@
     gap: 12px;
 
     .CartDelete {
-      color: var(--red);
+      color: $red;
       background-color: transparent;
 
       padding: 8px 13px;
-      border: 2px solid var(--red);
+      border: 2px solid $red;
       border-radius: 8px;
 
       cursor: pointer;
@@ -91,19 +93,19 @@
       transition: ease all 0.5s;
 
       &:hover {
-        color: var(--red-dark);
-        border: 2px solid var(--red-dark);
+        color: $red-dark;
+        border: 2px solid $red-dark;
       }
 
       &:active {
-        color: var(--red-dark);
-        border: 2px solid var(--red-dark);
+        color: $red-dark;
+        border: 2px solid $red-dark;
       }
     }
 
     .CartReserve {
-      color: var(--white);
-      background-color: var(--red);
+      color: $white;
+      background-color: $red;
 
       font-size: 1.45rem;
       font-weight: 600;
@@ -118,11 +120,11 @@
       transition: ease all 0.5s;
 
       &:hover {
-        background-color: var(--red-dark);
+        background-color: $red-dark;
       }
 
       &:active {
-        background-color: var(--red-dark);
+        background-color: $red-dark;
       }
     }
   }

@@ -24,7 +24,7 @@ export function Cart() {
 
   useEffect(() => {
     getUserEmail();
-    
+
     if (items.length > 0) {
       const { TotalPrice } = items.reduce((a, b) => ({
         TotalPrice: a.TotalPrice + b.TotalPrice,

@@ -1,5 +1,7 @@
+@import '../../global.scss';
+
 .HomeItem {
-  background-color: var(--white);
+  background-color: $white;
 
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
   border-radius: 8px;
   gap: 12px;
 
-  box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
+  box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
   transition: ease all 0.5s;
 
   a {
@@ -18,21 +20,21 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    
+
     .HomeItemImage {
       display: block;
       margin: 0;
-      
+
       max-height: 14rem;
     }
   }
-  
+
   .HomeItemBody {
     display: flex;
     flex-direction: column;
-    
+
     .HomeItemName {
-      color: #333;
+      color: $grey-black;
 
       font-size: 1.125rem;
       font-weight: 500;
@@ -55,8 +57,8 @@
     }
 
     .HomeItemAdd {
-      color: var(--white);
-      background-color: var(--red);
+      color: $white;
+      background-color: $red;
 
       font-size: 1.5rem;
       font-weight: 700;
@@ -70,7 +72,7 @@
       transition: ease all 0.5s;
 
       &:hover {
-        background-color: var(--red-dark);
+        background-color: $red-dark;
       }
     }
   }

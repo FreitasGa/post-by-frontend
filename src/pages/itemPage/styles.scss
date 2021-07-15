@@ -1,12 +1,14 @@
+@import '../../global.scss';
+
 .ItemPageBody {
-  color: #333;
+  color: $grey-black;
   padding: 0 17.5rem;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 
   .ItemPageItem {
-    background-color: var(--white);
+    background-color: $white;
 
     display: flex;
     flex-direction: row;
@@ -17,7 +19,7 @@
     width: fit-content;
     border-radius: 8px;
 
-    box-shadow: 0px 1px 4px 0px rgba($color: #000000, $alpha: 0.05);
+    box-shadow: 0px 1px 4px 0px rgba($color: $black, $alpha: 0.05);
     transition: ease all 0.5s;
 
     img {
@@ -53,14 +55,14 @@
 
         b {
           align-self: flex-end;
-          color: var(--red);
+          color: $red;
           font-size: 1.7rem;
         }
       }
 
       .ItemPageAdd {
-        color: var(--white);
-        background-color: var(--red);
+        color: $white;
+        background-color: $red;
 
         font-size: 1.45rem;
         font-weight: 600;
@@ -74,11 +76,11 @@
         transition: ease all 0.5s;
 
         &:hover {
-          background-color: var(--red-dark);
+          background-color: $red-dark;
         }
 
         &:active {
-          background-color: var(--red-dark);
+          background-color: $red-dark;
         }
       }
     }
@@ -101,8 +103,8 @@
   a {
     font-size: 18px;
 
-    background-color: var(--red);
-    color: var(--white);
+    background-color: $red;
+    color: $white;
     text-decoration: none;
 
     padding: 8px 20px;
@@ -111,11 +113,11 @@
     transition: ease all 0.5s;
 
     &:hover {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
 
     &:active {
-      background-color: var(--red-dark);
+      background-color: $red-dark;
     }
   }
 }

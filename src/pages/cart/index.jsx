@@ -111,7 +111,7 @@ export function Cart() {
         <h1>Carrinho</h1>
         {items.length === 0 ? (
           <div className="CartPlaceholder">
-            <h2>Para que você ainda não adicionou items ao carrinho.</h2>
+            <h2>Você ainda não adicionou items ao carrinho</h2>
             <Link to="/">Ir as compras</Link>
           </div>
         ) : (

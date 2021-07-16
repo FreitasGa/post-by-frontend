@@ -18,6 +18,7 @@ export function Profile() {
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [reserves, setReserves] = useState(sessionReserves || []);
+  const [state, setState] = useState(false);
 
   useEffect(() => {
     async function onLoad() {
@@ -36,13 +37,17 @@ export function Profile() {
     }
 
     onLoad();
-  }, [isAuthenticated]);
+  }, [state, isAuthenticated]);
 
   async function getUserAttributes() {
     const user = await Auth.currentAuthenticatedUser();
     const { name, email } = user.attributes;
     setName(name);
     setEmail(email);
+  }
+
+  function update() {
+    setState(!state);
   }
 
   return (
@@ -74,6 +79,7 @@ export function Profile() {
                       reserveId={reserveId}
                       totalPrice={totalPrice}
                       totalQuantity={totalQuantity}
+                      callback={update}
                     />
                   )
                 )}

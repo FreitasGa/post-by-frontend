@@ -1,10 +1,31 @@
+import { API } from 'aws-amplify';
+
+import DeleteIcon from '@material-ui/icons/Delete';
 import './styles.scss';
 
-export function ProfileItem({ items, reserveId, totalPrice, totalQuantity }) {
+export function ProfileItem({
+  items,
+  reserveId,
+  totalPrice,
+  totalQuantity,
+  callback,
+}) {
+  async function handleDelete() {
+    try {
+      await API.del('post-by', `/reserve/${reserveId}`);
+      callback();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="ProfileItemBody">
       <div className="ProfileItemHead">
-        <b>Reserva: {reserveId}</b>
+        <b>{reserveId}</b>
+        <button onClick={handleDelete}>
+          <DeleteIcon />
+        </button>
       </div>
 
       <div className="ProfileItemList">
@@ -21,6 +42,11 @@ export function ProfileItem({ items, reserveId, totalPrice, totalQuantity }) {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="ProfileItemFooter">
+        <b>Quantidade: {totalQuantity}</b>
+        <b>Total: R$ {totalPrice}</b>
       </div>
     </div>
   );
